@@ -7,7 +7,11 @@ video {
 }
 
 .hero-container {
-  background: url('../Media/images/Flama-Estudio-Home.jpg') center center/cover no-repeat;
+  /* margin: 10px; */
+  /* border-style: double;
+  border-width: 4px;
+  border-color: rgb(255, 255, 255); */
+  background: black;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -20,7 +24,7 @@ video {
 
 .hero-container > h1 {
   color: #fff;
-  font-size: 100px;
+  /* font-size: 100px; */
   margin-top: -100px;
 }
 
@@ -28,18 +32,42 @@ video {
   margin-top: 230px;
   color: rgb(235, 137, 186);
   font-size: 32px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif; */
 }
-.Hero-Logo{
-  position: relative;
+.hero-logo{
+  /* display: flex; */
+  width: 50%;
 }
 .hero-btns {
-  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 23px;
+  margin-top: 90px;
+  width: 90%;
+  /* font-size: medium; */
 }
 
 .hero-btns .btn {
   margin: 6px;
+}
+.hero-button{
+  border-radius: 5px;
+  background: linear-gradient(90deg, #64D3D7 0%, #B9B5E8 35% , #FFA2C9 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration:none;
+  color: white;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-width: 1px;
+  /* padding:3%; */
+  width: 15%;
+  height: 7vh;
+  font-family: sans-serif;
+  font-weight: bold;
 }
 
 .fa-play-circle {
@@ -47,13 +75,20 @@ video {
 }
 
 @media screen and (max-width: 960px) {
-  .hero-container > h1 {
-    font-size: 70px;
-    margin-top: -150px;
+  .hero-btns {
+    flex-direction: column;
+    align-items: center;
   }
+  .hero-button{
+    color: white;
+    padding:3%;
+    width: 30%;
+  
+  }
+  
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 500px) {
   .hero-container > h1 {
     font-size: 50px;
     margin-top: -100px;

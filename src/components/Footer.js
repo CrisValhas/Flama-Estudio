@@ -2,11 +2,14 @@ import React from 'react';
 import './Footer.css';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
+import behanceIcon from '../Media/images/behance-icon.png';
+import whatsappIcon from '../Media/images/whatsapp-icon.png';
+import igIcon from '../Media/images/ig-icon.png';
 
 function Footer() {
   return (
     <div className='footer-container'>
-      <section className='footer-subscription'>
+      {/* <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
           Join the Flama Estudio newsletter to receive our best products deals
         </p>
@@ -24,68 +27,50 @@ function Footer() {
             <Button buttonStyle='btn--outline'>Subscribe</Button>
           </form>
         </div>
-      </section>
-      <div class='footer-links'>
+      </section> */}
+      {/* <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>About Us</h2>
             <Link to='/sign-up'>How it works</Link>
             <Link to='/'>Testimonials</Link>
-            {/* <Link to='/'>Careers</Link> */}
-            {/* <Link to='/'>Investors</Link> */}
-            {/* <Link to='/'>Terms of Service</Link> */}
+            <Link to='/'>Careers</Link>
+            <Link to='/'>Investors</Link>
+            <Link to='/'>Terms of Service</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Contact Us</h2>
             <Link to='/'>Contact</Link>
             <Link to='/'>Support</Link>
-            {/* <Link to='/'>Destinations</Link> */}
-            {/* <Link to='/'>Sponsorships</Link> */}
+            <Link to='/'>Destinations</Link>
+            <Link to='/'>Sponsorships</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
-          {/* <div class='footer-link-items'>
+          <div class='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
             <Link to='/'>Ambassadors</Link>
             <Link to='/'>Agency</Link>
             <Link to='/'>Influencer</Link>
-          </div> */}
-          {/* <div class='footer-link-items'>
+          </div>
+          <div class='footer-link-items'>
             <h2>Social Media</h2>
             <Link to='/'>Instagram</Link>
             <Link to='/'>Facebook</Link>
             <Link to='/'>Youtube</Link>
             <Link to='/'>Twitter</Link>
-          </div> */}
+          </div>
         </div>
-      </div>
+      </div> */}
       <section class='social-media'>
         <div class='social-media-wrap'>
-          <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
-              Flama Estudio
-              {/* <i class='fab fa-typo3' /> */}
-            </Link>
-          </div>
           <small class='website-rights'>FlamaEstudio © 2020</small>
           <div class='social-icons'>
-            {/* <Link
-              class='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i class='fab fa-facebook-f' />
-            </Link> */}
-            <Link
-              class='social-icon-link instagram'
-              to='/'
-              target='_blank'
-              aria-label='Instagram'
-            >
-              <i class='fab fa-instagram' />
-            </Link>
+            <a  href="https://www.behance.net/FlamaEstudio"><img className='footer-icon' src={behanceIcon} alt="behance" /></a>
+            <a  href="https://www.instagram.com/flamaestudio_/"><img className='footer-icon' src={igIcon} alt="instagram" /></a>
+            <a  href="https://wa.me/541155029251"><img className='footer-icon' src={whatsappIcon} alt="whatsapp" /></a>
+            {/* <a title="e-mail" href="mailto: flama.dg.estudio@gmail.com"><img src="casarural.jpg" alt="Los Tejos" /></a> */}
             {/* <Link
               class='social-icon-link youtube'
               to='/'
