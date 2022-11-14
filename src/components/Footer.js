@@ -1,7 +1,5 @@
 import React from 'react';
 import './Footer.css';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
 import behanceIcon from '../Media/images/behance-icon.png';
 import whatsappIcon from '../Media/images/whatsapp-icon.png';
 import igIcon from '../Media/images/ig-icon.png';
@@ -65,7 +63,7 @@ function Footer() {
       </div> */}
       <section class='social-media'>
         <div class='social-media-wrap'>
-          <small class='website-rights'>FlamaEstudio © 2020</small>
+          <small class='website-rights'>FlamaEstudio © 2022</small>
           <div class='social-icons'>
             <a  href="https://www.behance.net/FlamaEstudio"><img className='footer-icon' src={behanceIcon} alt="behance" /></a>
             <a  href="https://www.instagram.com/flamaestudio_/"><img className='footer-icon' src={igIcon} alt="instagram" /></a>

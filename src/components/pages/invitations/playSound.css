@@ -1,0 +1,12 @@
+.playSound-button{
+    width: 100px;
+    height: 100px;
+    border-radius:50% ;
+    border-color: thistle;
+    border-style: solid;
+    border-width: 6px;
+    color: black;
+    font-size: 30px;
+    margin: 20px;
+    background-color:rgba(252, 0, 189, 0.514);
+}
