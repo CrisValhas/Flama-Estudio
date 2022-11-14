@@ -54,20 +54,27 @@ video {
 }
 .hero-button{
   border-radius: 5px;
-  background: linear-gradient(90deg, #64D3D7 0%, #B9B5E8 35% , #FFA2C9 100%);
+  /* background: linear-gradient(90deg, #64D3D7 0%, #B9B5E8 35% , #FFA2C9 100%); */
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration:none;
   color: white;
   border-style: solid;
-  border-color: rgb(0, 0, 0);
-  border-width: 1px;
+  border-image: linear-gradient(90deg, #64D3D7 0%, #B9B5E8 35% , #FFA2C9 100%) 30 ;
+  border-image-slice: 10;
+  border-radius: 10px;
+  border-color: #64D3D7;
+  border-width: 3px;
   /* padding:3%; */
   width: 15%;
   height: 7vh;
   font-family: sans-serif;
   font-weight: bold;
+}
+.hero-button:hover {
+  border-width: 5px;
+  background: linear-gradient(90deg, #64D3D7 0%, #B9B5E8 35% , #FFA2C9 100%);
 }
 
 .fa-play-circle {
