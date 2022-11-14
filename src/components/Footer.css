@@ -105,6 +105,7 @@
 }
 
 .social-media-wrap {
+  font-family: sans-serif;
   display: flex;
   justify-content: space-around;
   align-items: center;

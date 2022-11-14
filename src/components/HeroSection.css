@@ -61,10 +61,10 @@ video {
   text-decoration:none;
   color: white;
   border-style: solid;
-  border-image: linear-gradient(90deg, #64D3D7 0%, #B9B5E8 35% , #FFA2C9 100%) 30 ;
-  border-image-slice: 10;
-  border-radius: 10px;
-  border-color: #64D3D7;
+  /* border-image: linear-gradient(90deg, #64D3D7 0%, #B9B5E8 35% , #FFA2C9 100%) 30 ;
+  border-image-slice: 9; */
+  border-radius: 9px;
+  border-color: #FFA2C9;
   border-width: 3px;
   /* padding:3%; */
   width: 15%;
@@ -73,7 +73,8 @@ video {
   font-weight: bold;
 }
 .hero-button:hover {
-  border-width: 5px;
+  scale: 1.05;
+  border-width: 0px;
   background: linear-gradient(90deg, #64D3D7 0%, #B9B5E8 35% , #FFA2C9 100%);
 }
 
