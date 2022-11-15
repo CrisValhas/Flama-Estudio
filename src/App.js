@@ -1,18 +1,17 @@
 import React from 'react';
-// import Navbar from './components/Navbar';
+import { Route, Routes,useLocation } from "react-router-dom";
 import './App.css';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Morena from './components/pages/invitations/mis15Morena';
 
+
 function App() {
+  const location = useLocation();
   return (
-      <Router>
-        <Switch>
-          <Route path='/' exact component={Home} />
-          <Route path='/invitaciones/Mis15Morena' component={Morena} />
-        </Switch>
-      </Router>
+      <Routes location={location} key={location.pathname}>
+          <Route path='/' element={<Home/>} />
+          <Route path='/invitaciones/Mis15Morena' element={<Morena/>} />
+      </Routes>
   );
 }
 
