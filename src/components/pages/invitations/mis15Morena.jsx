@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '../../Footer';
-import './mis15Morena.css'
-import PlaySound from './playSound'
+import './mis15Morena.css';
+// import PlaySound from './playSound';
+import glitter from '../../../Media/images/glitter.mp4';
+import starship from '../audio/Starship   We Built This City (Official Music Video).mp3';
+
 
 function Morena() {
-
-
+  const [isPlaying, setIsPlaying] = useState(false);
+  const sound = new Audio(starship);
+  const playSound = () => {
+    sound.paused ? sound.play(): sound.pause();
+    setIsPlaying(!isPlaying);
+  }
 
   return (
     <>
+      <video src={glitter} autoPlay loop muted />
       <div className='morena-container'>
-        <PlaySound />
+        <button className='playSound-button'
+          onClick={() => playSound()}
+        >
+          {!isPlaying ? '⏵' : '⏸'}
+        </button>
+        {/* <PlaySound /> */}
         <p className='morena-play'>Dale Play !</p>
         <section className='morena-title' >
           <p >Mis 15 Morena</p>

@@ -2,12 +2,13 @@ import React from 'react';
 import '../App.css';
 import './HeroSection.css';
 import Logo from '../Media/images/Flama-Estudio-Logo.png';
+// import glitter from '../Media/images/glitter.mp4';
 
 function HeroSection() {
   return (
     <div className='hero-container'>
       <img className='hero-logo' src={Logo} alt="Flama Estudio"/>
-      {/* <video src='/videos/video-1.mp4' autoPlay loop muted /> */}
+      {/* <video src={glitter} autoPlay loop muted /> */}
       {/* <h1>Graphic Design</h1> */}
       {/* <p>What are you waiting for?</p> */}
       <div className='hero-btns'>
