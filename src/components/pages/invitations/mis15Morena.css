@@ -7,6 +7,10 @@ video {
 }
 
 .playSound-button {
+    /* position: absolute;
+    overflow-y: 0;
+    overflow-x: 0; */
+    /* position: relative; */
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -55,19 +59,19 @@ video {
 }
 
 .morena-portada {
-    width: 70%;
-    border-width: medium;
-    border-style: outset;
-    border-color: white;
+    width: 80%;
+    /* border-width: medium; */
+    /* border-style: outset; */
+    /* border-color: white; */
     border-radius: 20px;
-    opacity: 0.9;
+    /* opacity: 0.9; */
 }
 
 .morena-date {
     text-align: center;
     color: white;
     font-size: 40px;
-    margin: 30px;
+    /* margin: 30px; */
 }
 
 .morena-date-img {
@@ -78,7 +82,7 @@ video {
     width: 70%;
     color: white;
     font-size: 26px;
-    margin: 30px;
+    /* margin: 30px; */
     text-align: center;
     /* border-style: double;
     border-width: 10px;
@@ -218,7 +222,7 @@ video {
 
 .morena-nonSection {
     margin: 30px;
-    /* width: 35%; */
+    width: 35%;
 }
 
 @media screen and (max-width: 650px) {

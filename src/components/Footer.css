@@ -116,10 +116,11 @@
 .social-icons {
   display: flex;
   justify-content: space-between;
+  gap: 9px;
   align-items: center;
 }
 .footer-icon{
-  width: 40px;
+  width: 30px;
 }
 .social-logo {
   color: #fff;

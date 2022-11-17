@@ -3,8 +3,8 @@ import Footer from '../../Footer';
 import './mis15Morena.css';
 // import PlaySound from './playSound';
 import glitter from '../../../Media/images/glitter.mp4';
-import starship from '../audio/Starship   We Built This City (Official Music Video).mp3';
-import Portada from '../../../Media/images/MORENA-FOTOS1.png';
+import starship from '../audio/Audio-background.mp3';
+import Portada from '../../../Media/images/MORENA-PORTADA.png';
 import Contacto from '../../../Media/images/CONTACTO.png';
 import Direccion from '../../../Media/images/DIRECCION.png';
 import Dresscode from '../../../Media/images/DRESSCODE.png';
@@ -29,11 +29,11 @@ function Morena() {
           {/* <p >Mis 15 Morena</p> */}
           <img className='morena-portada' src={Portada} />
         </section>
-        <button className='playSound-button'
+        {/* <button className='playSound-button'
           onClick={() => playSound()}
         >
           {!isPlaying ? '⏵' : '⏸'}
-        </button>
+        </button> */}
         {/* <PlaySound /> */}
         {/* <p className='morena-play'>Dale Play !</p> */}
 
