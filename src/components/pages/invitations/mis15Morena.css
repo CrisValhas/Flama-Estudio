@@ -4,20 +4,22 @@ video {
     height: 100%;
     position: fixed;
     z-index: -1;
-  }
-.playSound-button{
+}
+
+.playSound-button {
     width: 100px;
     height: 100px;
-    border-radius:50% ;
+    border-radius: 50%;
     border-color: thistle;
     border-style: solid;
     border-width: 6px;
     color: black;
     font-size: 30px;
     margin: 20px;
-    background-color:rgba(252, 0, 189, 0.514);
+    background-color: rgba(252, 0, 189, 0.514);
 }
-.morena-container{
+
+.morena-container {
     /* background-color: black; */
     /* height: 100vh; */
     width: 100%;
@@ -26,8 +28,9 @@ video {
     justify-content: center;
     align-items: center;
     object-fit: contain;
-} 
-.morena-play{
+}
+
+.morena-play {
     width: 200px;
     color: white;
     font-size: 26px;
@@ -38,21 +41,40 @@ video {
     border-color: thistle; */
     padding: 20px;
 }
-.morena-title{
+
+.morena-title {
+    overflow: hidden;
+    /* border-radius: 20px; */
+    width: 100%;
     font-family: cursive;
     font-style: italic;
     text-align: center;
-    color: rgb(252, 0, 189);
+    /* background-color: black; */
     font-size: 50px;
     margin: 50px;
 }
-.morena-date{
+
+.morena-portada {
+    width: 70%;
+    border-width: medium;
+    border-style: outset;
+    border-color: white;
+    border-radius: 20px;
+    opacity: 0.9;
+}
+
+.morena-date {
     text-align: center;
     color: white;
     font-size: 40px;
     margin: 30px;
 }
-.morena-text{
+
+.morena-date-img {
+    width: 70%;
+}
+
+.morena-text {
     width: 70%;
     color: white;
     font-size: 26px;
@@ -64,73 +86,154 @@ video {
     border-color: thistle; */
     padding: 20px;
 }
-.morena-box{
-    margin:30px;
+
+.morena-box {
+    margin: 30px;
     width: 70%;
     display: grid;
     grid-template-columns: 50% 50%;
 }
-.morena-boxItem{
+
+.morena-boxItem {
     /* width: 30%; */
     color: white;
     font-size: 18px;
     margin: 10px;
     text-align: center;
-    border-style: outset;
+    /* background-color: rgba(255, 255, 255, 0.205); */
+    background-color: rgba(0, 0, 0, 0.925);
+    /* border-style: outset; */
     border-width: 5px;
-    border-radius: 5px;
-    border-color: thistle;
+    border-radius: 10px;
+    /* border-color: thistle; */
     padding: 30px;
 }
-.boxItem-title{
+
+.boxItem-title {
+    width: 70%;
+    /* box-sizing: border-box; */
     color: white;
     border-color: white;
-    font-size: 30px;
+    /* font-size: 30px; */
     margin-bottom: 16px;
 
 }
-.boxItem-second{
+
+.boxItem-second {
     color: white;
     border-color: white;
     font-size: 23px;
     margin: 16px;
+    /* width: 30vh; */
 }
-.boxItem-button{
+
+.boxItem-button {
+    opacity: 1;
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 16px;
     text-align: center;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 5px;
-    border-color: thistle;
-    padding: 5px;
+    /* border-style: solid; */
+    /* border-width: 3px; */
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 9px;
 }
-.boxItem-button:hover{
-    background-color: rgb(31, 2, 31);
+
+.boxItem-button:hover {
+    /* background-color: rgba(197, 14, 197, 0.308); */
+    opacity: 0.9;
 }
-.morena-boxItemNonSection{
-        color: white;
-        font-size: 18px;
-        margin: 10px;
-        text-align: center;
-        border-style: outset;
-        border-width: 5px;
-        border-radius: 5px;
-        border-color: thistle;
-        padding: 30px;
+
+.morenaform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.morena-nonSection{
-    margin:30px;
+.form-declaration{
+    margin: 16px;
+}
+.morena-input-name{
     width: 40%;
+    height: 4vh;
+    border-radius: 10px;
+    /* margin: 7px; */
+    padding: 10px;
+}
+.morena-checkbox{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: flex-end;
+    /* justify-content: center; */
+    /* width: 80%; */
+
+}
+
+.morena-btns-confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 50%;
+    /* gap: 16px; */
+    /* margin: 10px; */
+}
+.form-second {
+    width: 100px;
+    color: white;
+    border-color: white;
+    font-size: 16px;
+    margin: 16px;
+    /* width: 30vh; */
+}
+.morena-input {
+    width: 70%;
+    height: 3vh;
+    /* border-radius: 10px; */
+    margin: 16px;
+    /* padding: 20px; */
+}
+.morena-input-commments {
+    width: 70%;
+    height: 10vh;
+    border-radius: 7px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.morena-boxItemNonSection {
+    color: white;
+    font-size: 16px;
+    margin: 10px;
+    text-align: center;
+    /* border-style: outset; */
+    background-color: rgba(0, 0, 0, 0.925);
+    border-width: 5px;
+    border-radius: 10px;
+    /* border-color: thistle; */
+    padding: 30px;
+    /* width: 70%; */
+}
+
+.morena-nonSection {
+    margin: 30px;
+    /* width: 35%; */
 }
 
 @media screen and (max-width: 650px) {
-    .morena-box{
+    .morena-box {
         display: flex;
         flex-direction: column;
     }
-    .morena-nonSection{
-        width: 90%;
+
+    .morena-nonSection {
+        width: 70%;
+    }
+    .morena-input-name{
+        width: 100%;
+    }
+    .morena-input-commments{
+        width: 100%;
     }
 }
