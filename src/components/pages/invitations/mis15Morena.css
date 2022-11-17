@@ -24,6 +24,7 @@ video {
 }
 
 .morena-container {
+    font-family: sans-serif;
     /* background-color: black; */
     /* height: 100vh; */
     width: 100%;
@@ -55,7 +56,7 @@ video {
     text-align: center;
     /* background-color: black; */
     font-size: 50px;
-    margin: 50px;
+    margin-top: 50px;
 }
 
 .morena-portada {
@@ -92,20 +93,20 @@ video {
 }
 
 .morena-box {
-    margin: 30px;
     width: 70%;
     display: grid;
     grid-template-columns: 50% 50%;
 }
 
 .morena-boxItem {
+    box-shadow: 3px 3px 3px 1px rgba(255, 255, 255, 0.800);
     /* width: 30%; */
     color: white;
     font-size: 18px;
     margin: 10px;
     text-align: center;
     /* background-color: rgba(255, 255, 255, 0.205); */
-    background-color: rgba(0, 0, 0, 0.925);
+    background-color: rgba(0, 0, 0, 0.800);
     /* border-style: outset; */
     border-width: 5px;
     border-radius: 10px;
@@ -212,7 +213,8 @@ video {
     margin: 10px;
     text-align: center;
     /* border-style: outset; */
-    background-color: rgba(0, 0, 0, 0.925);
+    box-shadow: 3px 3px 3px 1px rgba(255, 255, 255, 0.800);
+    background-color: rgba(0, 0, 0, 0.800);
     border-width: 5px;
     border-radius: 10px;
     /* border-color: thistle; */
@@ -226,6 +228,18 @@ video {
 }
 
 @media screen and (max-width: 650px) {
+    .morena-portada{
+        width: 100%;
+    }
+    .boxItem-title{
+        width: 95%;
+    }
+    .boxItem-second{
+        font-size:19px
+    }
+    .morena-boxItem{
+        font-size:15px
+    }
     .morena-box {
         display: flex;
         flex-direction: column;

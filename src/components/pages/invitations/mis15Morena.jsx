@@ -40,9 +40,9 @@ function Morena() {
         <section className='morena-date' >
           <img className='morena-date-img' src={Fecha} />
         </section>
-        <section className='morena-text' >
+        {/* <section className='morena-text' >
           <p ></p>
-        </section>
+        </section> */}
         <div className='morena-box'>
           <section className='morena-boxItem' >
             <div>
