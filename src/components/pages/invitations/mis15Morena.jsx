@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Footer from '../../Footer';
 import './mis15Morena.css';
-// import PlaySound from './playSound';
 import glitter from '../../../Media/images/glitter.mp4';
 import starship from '../audio/Audio-background.mp3';
 import Portada from '../../../Media/images/MORENA-PORTADA.png';
@@ -26,7 +25,6 @@ function Morena() {
       <video src={glitter} autoPlay loop muted />
       <div className='morena-container'>
         <section className='morena-title' >
-          {/* <p >Mis 15 Morena</p> */}
           <img className='morena-portada' src={Portada} />
         </section>
         {/* <button className='playSound-button'
@@ -40,13 +38,10 @@ function Morena() {
         <section className='morena-date' >
           <img className='morena-date-img' src={Fecha} />
         </section>
-        {/* <section className='morena-text' >
-          <p ></p>
-        </section> */}
+
         <div className='morena-box'>
           <section className='morena-boxItem' >
             <div>
-              {/* <p className='boxItem-title'> Salon </p> */}
               <img className='boxItem-title' src={Direccion} />
               <p className='boxItem-second'>Multiespacio Sr Frog's</p>
               <p >Guemes 1010, Pico Truncado, Provincia de Santa Cruz</p>
@@ -56,7 +51,6 @@ function Morena() {
           </section>
           <section className='morena-boxItem' >
             <div>
-              {/* <p className='boxItem-title'> Playlist </p> */}
               <img className='boxItem-title' src={Playlist} />
               <p className='boxItem-second'>¡Quiero que nos divirtamos juntos!</p>
               <p >Ayúdame desde ya a hacer la playlist de mi fiesta con las canciones infaltables, las que quieres oír y bailar</p>
@@ -65,12 +59,10 @@ function Morena() {
             </div>
           </section>
           <section className='morena-boxItem' >
-
             <img className='boxItem-title' src={Dresscode} />
             <p className='boxItem-second'>Elegante Sport</p>
             <p ></p>
             <p className='boxItem-second'></p>
-            {/* <a className='boxItem-button' href='https://open.spotify.com/playlist/6aQAj0aiCPjeA7l8DJueqh?si=e0613f39ac05404e'>Playlist</a> */}
           </section>
           <section className='morena-boxItem' >
             <div>
@@ -82,6 +74,7 @@ function Morena() {
             </div>
           </section>
         </div>
+
         <div className='morena-nonSection'>
           <section className='morena-boxItemNonSection' >
             <form className='morenaform'>
@@ -105,7 +98,6 @@ function Morena() {
           <section className='morena-boxItemNonSection' >
             <div>
               <img className='boxItem-title' src={Contacto} />
-              {/* <p className='boxItem-second'>Elegante</p> */}
               <p >Para mí es muy importante que confirmes tu asistencia a mi cumple.</p>
               <p className='boxItem-second'></p>
               <a className='boxItem-button' href='https://wa.me/542974434360'>Confirma acá</a>

@@ -7,10 +7,6 @@ video {
 }
 
 .playSound-button {
-    /* position: absolute;
-    overflow-y: 0;
-    overflow-x: 0; */
-    /* position: relative; */
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -25,8 +21,6 @@ video {
 
 .morena-container {
     font-family: sans-serif;
-    /* background-color: black; */
-    /* height: 100vh; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -40,39 +34,28 @@ video {
     color: white;
     font-size: 26px;
     text-align: center;
-    /* border-style: double;
-    border-width: 10px;
-    border-radius: 5px;
-    border-color: thistle; */
     padding: 20px;
 }
 
 .morena-title {
     overflow: hidden;
-    /* border-radius: 20px; */
     width: 100%;
     font-family: cursive;
     font-style: italic;
     text-align: center;
-    /* background-color: black; */
     font-size: 50px;
     margin-top: 50px;
 }
 
 .morena-portada {
     width: 80%;
-    /* border-width: medium; */
-    /* border-style: outset; */
-    /* border-color: white; */
     border-radius: 20px;
-    /* opacity: 0.9; */
 }
 
 .morena-date {
     text-align: center;
     color: white;
     font-size: 40px;
-    /* margin: 30px; */
 }
 
 .morena-date-img {
@@ -83,12 +66,7 @@ video {
     width: 70%;
     color: white;
     font-size: 26px;
-    /* margin: 30px; */
     text-align: center;
-    /* border-style: double;
-    border-width: 10px;
-    border-radius: 5px;
-    border-color: thistle; */
     padding: 20px;
 }
 
@@ -99,29 +77,22 @@ video {
 }
 
 .morena-boxItem {
-    box-shadow: 3px 3px 3px 1px rgba(255, 255, 255, 0.800);
-    /* width: 30%; */
+    /* box-shadow: 3px 3px 3px 1px rgba(255, 255, 255, 0.800); */
     color: white;
     font-size: 18px;
     margin: 10px;
     text-align: center;
-    /* background-color: rgba(255, 255, 255, 0.205); */
     background-color: rgba(0, 0, 0, 0.800);
-    /* border-style: outset; */
     border-width: 5px;
     border-radius: 10px;
-    /* border-color: thistle; */
     padding: 30px;
 }
 
 .boxItem-title {
     width: 70%;
-    /* box-sizing: border-box; */
     color: white;
     border-color: white;
-    /* font-size: 30px; */
     margin-bottom: 16px;
-
 }
 
 .boxItem-second {
@@ -129,7 +100,6 @@ video {
     border-color: white;
     font-size: 23px;
     margin: 16px;
-    /* width: 30vh; */
 }
 
 .boxItem-button {
@@ -138,15 +108,12 @@ video {
     color: rgb(0, 0, 0);
     font-size: 16px;
     text-align: center;
-    /* border-style: solid; */
-    /* border-width: 3px; */
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     padding: 9px;
 }
 
 .boxItem-button:hover {
-    /* background-color: rgba(197, 14, 197, 0.308); */
     opacity: 0.9;
 }
 
@@ -155,23 +122,22 @@ video {
     flex-direction: column;
     align-items: center;
 }
+
 .form-declaration{
     margin: 16px;
 }
+
 .morena-input-name{
     width: 40%;
     height: 4vh;
     border-radius: 10px;
-    /* margin: 7px; */
     padding: 10px;
 }
+
 .morena-checkbox{
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: flex-end;
-    /* justify-content: center; */
-    /* width: 80%; */
-
 }
 
 .morena-btns-confirm {
@@ -181,24 +147,22 @@ video {
     align-content: center;
     justify-content: center;
     width: 50%;
-    /* gap: 16px; */
-    /* margin: 10px; */
 }
+
 .form-second {
     width: 100px;
     color: white;
     border-color: white;
     font-size: 16px;
     margin: 16px;
-    /* width: 30vh; */
 }
+
 .morena-input {
     width: 70%;
     height: 3vh;
-    /* border-radius: 10px; */
     margin: 16px;
-    /* padding: 20px; */
 }
+
 .morena-input-commments {
     width: 70%;
     height: 10vh;
@@ -210,20 +174,16 @@ video {
 .morena-boxItemNonSection {
     color: white;
     font-size: 16px;
-    margin: 10px;
+    margin: 30px;
     text-align: center;
-    /* border-style: outset; */
-    box-shadow: 3px 3px 3px 1px rgba(255, 255, 255, 0.800);
+    /* box-shadow: 3px 3px 3px 1px rgba(255, 255, 255, 0.800); */
     background-color: rgba(0, 0, 0, 0.800);
     border-width: 5px;
     border-radius: 10px;
-    /* border-color: thistle; */
     padding: 30px;
-    /* width: 70%; */
 }
 
 .morena-nonSection {
-    margin: 30px;
     width: 35%;
 }
 
@@ -231,15 +191,19 @@ video {
     .morena-portada{
         width: 100%;
     }
+
     .boxItem-title{
         width: 95%;
     }
+
     .boxItem-second{
         font-size:19px
     }
+
     .morena-boxItem{
         font-size:15px
     }
+
     .morena-box {
         display: flex;
         flex-direction: column;
@@ -248,9 +212,11 @@ video {
     .morena-nonSection {
         width: 70%;
     }
+
     .morena-input-name{
         width: 100%;
     }
+
     .morena-input-commments{
         width: 100%;
     }
