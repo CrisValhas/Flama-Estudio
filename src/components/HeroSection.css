@@ -74,7 +74,7 @@ video {
   font-weight: bold;
 }
 .hero-button:hover {
-  scale: 1.05;
+  /* scale: 1.05; */
   border-width: 0px;
   background: linear-gradient(90deg, #64D3D7 0%, #B9B5E8 35% , #FFA2C9 100%);
 }

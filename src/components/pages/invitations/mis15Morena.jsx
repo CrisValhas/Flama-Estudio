@@ -135,7 +135,7 @@ function Morena() {
             <div>
               <img className='boxItem-title' src={Regalo} />
               <p className='boxItem-second'></p>
-              <p >Si deseas regalarme algo más que tu presencia...</p>
+              <p >El mejor regalo para mi es tu compañía, pero si quieres obsequiarme algo</p>
               <p className='boxItem-second'></p>
               <button onClick={dropDown} className='boxItem-button' href=''>CBU</button>
               <div className='morena-span'>
