@@ -14,6 +14,8 @@ import Asistencia from '../../../Media/images/ASISTENCIA.png';
 import useSound from 'use-sound';
 import { useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import playico from '../../../Media/images/icons8-play-30.png';
+import pauseico from '../../../Media/images/icons8-pausa-30.png';
 
 function Morena() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -98,7 +100,7 @@ function Morena() {
         <button className='playSound-button'
           onClick={() => playSound()}
         >
-          {!isPlaying ? '⏵' : '⏸'}
+          {!isPlaying ? <img className="playersicons" src={playico} alt="playico" /> : <img src={pauseico} alt="pauseico" />}
         </button>
         <section className='morena-date' >
           <img className='morena-date-img' src={Fecha} />
@@ -156,8 +158,8 @@ function Morena() {
               <input className='morena-input-name' name="nombre" value={form.nombre} type="text" placeholder='Nombre' onChange={asistencia} />
               <div className='morena-checkbox'>
                 <div className='morena-btns-confirm'>
-                  <p className='form-second'>asistiré</p>
-                  <p className='form-second'>no asistiré</p>
+                  <p className='form-second'>Asistiré</p>
+                  <p className='form-second'>No asistiré</p>
                 </div>
                 <div className='morena-btns-confirm'>
                   <input required className='morena-input' type="checkbox" name="asistire" id="asistire" onChange={asistencia} />

@@ -7,18 +7,24 @@ video {
 }
 
 .playSound-button {
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
     position:fixed;
 	width:83px;
 	height:83px;
 	top:40%;
 	right:240px;
-	background-color:rgba(255, 255, 255, 0.61);
+	background-color:rgb(255, 255, 255);
 	color:rgb(0, 0, 0);
 	border-radius:10px;
 	text-align:center;
 	box-shadow: 1px 1px 1px rgb(0, 0, 0);
     border-color: rgb(0, 0, 0);
-    font-size: 43px;
+}
+.playersicons{
+    width: 30px;
 }
 
 .morena-container {
@@ -203,7 +209,7 @@ video {
     }
 
     .boxItem-title{
-        width: 95%;
+        width: 75%;
     }
 
     .boxItem-second{
@@ -217,10 +223,11 @@ video {
     .morena-box {
         display: flex;
         flex-direction: column;
+        width: 95%;
     }
 
     .morena-nonSection {
-        width: 80%;
+        width: 100%;
     }
 
     .morena-input-name{
@@ -236,12 +243,14 @@ video {
         height:43px;
         top:10%;
         right:10px;
-        background-color:rgba(255, 255, 255, 0.61);
         color:rgb(0, 0, 0);
         border-radius:10px;
         text-align:center;
         box-shadow: 1px 1px 1px rgb(0, 0, 0);
         border-color: rgb(0, 0, 0);
         font-size: 23px;
+    }
+    .playersicons{
+        width: 15px;
     }
 }
