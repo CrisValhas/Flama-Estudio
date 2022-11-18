@@ -166,7 +166,7 @@ function Morena() {
                   <input required className='morena-input' type="checkbox" name="asistire" id="no asistire" onChange={asistencia} />
                 </div>
               </div>
-              <p className='form-declaration'> En caso de tener alguna restricción o preferencia alimenticia avisanos</p>
+              <p className='form-declaration'> En caso de tener alguna restricción o preferencia alimentaria avisanos</p>
               <input className='morena-input-commments' type="text" value={form.message} name="message"  onChange={asistencia} />
               <button className="boxItem-button" onClick={sendEmail}>Enviar</button>
             </form>
