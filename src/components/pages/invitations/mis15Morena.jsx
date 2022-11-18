@@ -100,7 +100,7 @@ function Morena() {
         <button className='playSound-button'
           onClick={() => playSound()}
         >
-          {!isPlaying ? <img className="playersicons" src={playico} alt="playico" /> : <img src={pauseico} alt="pauseico" />}
+          {!isPlaying ? 'Play' : 'Pause'}
         </button>
         <section className='morena-date' >
           <img className='morena-date-img' src={Fecha} />

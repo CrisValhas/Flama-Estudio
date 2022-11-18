@@ -22,6 +22,8 @@ video {
 	text-align:center;
 	box-shadow: 1px 1px 1px rgb(0, 0, 0);
     border-color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size:larger;
 }
 .playersicons{
     width: 30px;
