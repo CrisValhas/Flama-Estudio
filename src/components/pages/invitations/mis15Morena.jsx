@@ -11,30 +11,95 @@ import Playlist from '../../../Media/images/PLAYLIST.png';
 import Regalo from '../../../Media/images/REGALO.png';
 import Fecha from '../../../Media/images/FECHA.png';
 import Asistencia from '../../../Media/images/ASISTENCIA.png';
+import useSound from 'use-sound';
+import { useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 
 function Morena() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const sound = new Audio(starship);
   const playSound = () => {
-    sound.paused ? sound.play() : sound.pause();
+    isPlaying === false ? play() : pause();
     setIsPlaying(!isPlaying);
   }
+  const [play, { pause }] = useSound(starship);
+  const [form, setForm] = useState(
+    {
+      user_email:"cristianrubiles@gmail.com",
+      to_name:"MORENA",
+      nombre: "",
+      asistire: "",
+      message: ""
+    }
+  );
+  const asistencia = e => {
+    if (e.target.name === "nombre"){
+      setForm({
+        ...form,
+        [e.target.name]: e.target.value,
+      });
+      return
+    }
+    if (e.target.name === "message"){
+      setForm({
+        ...form,
+        [e.target.name]: e.target.value,
+      });
+      return
+    }
+    if (form.asistire !== "") {
+      document.getElementById('no asistire').disabled = false;
+      document.getElementById('asistire').disabled = false;
+      setForm({
+        ...form,
+        [e.target.name]: "",
+      });
+    } else {
+      setForm({
+        ...form,
+        [e.target.name]: e.target.id,
+      });
+      if (e.target.id === "asistire") {
+        document.getElementById('no asistire').disabled = true;
+      }
+      if (e.target.id === "no asistire") {
+        document.getElementById('asistire').disabled = true;
+      }
+    }
 
+  }
+  const sendEmail = e => {
+    e.preventDefault();
+    emailjs.send(
+      'service_y5elzjb', 
+      'template_q2ligwe',
+      form,
+      'tXNUd1lU69kvU6kSw', 
+      )
+      .then((result) => {
+          console.log(result.text);
+          window.alert("su Confirmacion se envio correctamente")
+      }, (error) => {
+          console.log(error.text);
+          window.alert("ocurrio un error al enviar su confirmacion")
+      });
+      
+  };
+  const [isVisible,setIsVisible] = useState(false);
+  const dropDown = ()=>{
+    setIsVisible(!isVisible)
+  }
   return (
     <>
       <video src={glitter} autoPlay loop muted />
       <div className='morena-container'>
-        <section className='morena-title' >
-          <img className='morena-portada' src={Portada} />
+        <section className='morena-title'  >
+          <img className='morena-portada' src={Portada} alt="portada" />
         </section>
-        {/* <button className='playSound-button'
+        <button className='playSound-button'
           onClick={() => playSound()}
         >
           {!isPlaying ? '⏵' : '⏸'}
-        </button> */}
-        {/* <PlaySound /> */}
-        {/* <p className='morena-play'>Dale Play !</p> */}
-
+        </button>
         <section className='morena-date' >
           <img className='morena-date-img' src={Fecha} />
         </section>
@@ -51,11 +116,11 @@ function Morena() {
           </section>
           <section className='morena-boxItem' >
             <div>
-              <img className='boxItem-title' src={Playlist} />
-              <p className='boxItem-second'>¡Quiero que nos divirtamos juntos!</p>
-              <p >Ayúdame desde ya a hacer la playlist de mi fiesta con las canciones infaltables, las que quieres oír y bailar</p>
+              <img className='boxItem-title' src={Playlist} alt="Playlist" />
+              <p className='boxItem-second'>Ayudame a armar la playlist de la fiesta</p>
+              <p ></p>
               <p className='boxItem-second'></p>
-              <a className='boxItem-button' href='https://open.spotify.com/playlist/62XN10JNbnQtNDePedsOYZ?si=D0zXiP9nRoSAszmaS2TWFw&pt=949c0cf28246b4c8b8c3b565317fb217'>Playlist</a>
+              <a className='boxItem-button' href='https://open.spotify.com/playlist/62XN10JNbnQtNDePedsOYZ?si=D0zXiP9nRoSAszmaS2TWFw&pt_success=1&nd=1'>Spotify</a>
             </div>
           </section>
           <section className='morena-boxItem' >
@@ -68,10 +133,18 @@ function Morena() {
             <div>
               <img className='boxItem-title' src={Regalo} />
               <p className='boxItem-second'></p>
-              <p >Lo que más quiero es compartir con vos nuestro gran día, pero si deseas regalarme algo podés hacer clic en el siguiente botón</p>
+              <p >Si deseas regalarme algo más que tu hermosa presencia...</p>
               <p className='boxItem-second'></p>
-              <a className='boxItem-button' href=''>Regalo</a>
+              <button onClick={dropDown} className='boxItem-button' href=''>Regalo</button>
+              <div className='morena-span'>
+              {
+              isVisible &&
+              
+              <span >CBU 0000007900234841773845</span> }
+              </div>
+              
             </div>
+
           </section>
         </div>
 
@@ -79,30 +152,35 @@ function Morena() {
           <section className='morena-boxItemNonSection' >
             <form className='morenaform'>
               <img className='boxItem-title' src={Asistencia} />
-              <p className='form-declaration'>Para mí es muy importante que confirmes tu asistencia a mi cumple.</p>
-              <input className='morena-input-name' type="text" placeholder='Nombre' />
+              <p className='form-declaration'>Es muy importante que confirmes tu asistencia</p>
+              <input className='morena-input-name' name="nombre" value={form.nombre} type="text" placeholder='Nombre' onChange={asistencia} />
               <div className='morena-checkbox'>
                 <div className='morena-btns-confirm'>
-                  <p className='form-second'>asistire</p>
-                  <p className='form-second'>no asistire</p>
+                  <p className='form-second'>asistiré</p>
+                  <p className='form-second'>no asistiré</p>
                 </div>
                 <div className='morena-btns-confirm'>
-                  <input className='morena-input' type="checkbox" />
-                  <input className='morena-input' type="checkbox" />
+                  <input required className='morena-input' type="checkbox" name="asistire" id="asistire" onChange={asistencia} />
+                  <input required className='morena-input' type="checkbox" name="asistire" id="no asistire" onChange={asistencia} />
                 </div>
               </div>
-              <input className='morena-input-commments' type="text" placeholder='comentario alimenticio' />
+              <p className='form-declaration'> En caso de tener alguna restricción o preferencia alimenticia avisanos</p>
+              <input className='morena-input-commments' type="text" value={form.message} name="message"  onChange={asistencia} />
+              <button className="boxItem-button" onClick={sendEmail}>Enviar</button>
             </form>
           </section>
 
           <section className='morena-boxItemNonSection' >
             <div>
               <img className='boxItem-title' src={Contacto} />
-              <p >Para mí es muy importante que confirmes tu asistencia a mi cumple.</p>
+              {/* <p >Es muy importante que confirmes tu asistencia</p> */}
               <p className='boxItem-second'></p>
-              <a className='boxItem-button' href='https://wa.me/542974434360'>Confirma acá</a>
+              <a className='boxItem-button' href='https://wa.me/542974434360'>Whatsapp</a>
             </div>
           </section>
+          {/* <audio id="musica" loop="">
+            <source src={starship} type="audio/mp3"/>
+          </audio> */}
           {/* <iframe
             style={{ 'border-radius': '12px', 'margin-top': '20px' }}
             src="https://open.spotify.com/embed/track/1x5gfSHfhWpMFKKqbuDe9G?utm_source=generator"
